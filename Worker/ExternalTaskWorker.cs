@@ -12,10 +12,10 @@ namespace CamundaClient.Worker
         private string workerId = Guid.NewGuid().ToString(); // TODO: Make configurable
 
         private Timer taskQueryTimer;
-        private long pollingIntervalInMilliseconds = 50; // every 50 milliseconds
-        private int maxDegreeOfParallelism = 2;
-        private int maxTasksToFetchAtOnce = 10;
-        private long lockDurationInMilliseconds = 1 * 60 * 1000; // 1 minute
+        private long pollingIntervalInMilliseconds = 1000; // every 50 milliseconds
+        private int maxDegreeOfParallelism = 1;
+        private int maxTasksToFetchAtOnce = 1;
+        private long lockDurationInMilliseconds = 10 * 60 * 1000; // 1 minute
         private ExternalTaskService externalTaskService;
         private ExternalTaskWorkerInfo taskWorkerInfo;
 
